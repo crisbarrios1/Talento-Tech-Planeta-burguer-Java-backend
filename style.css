@@ -783,7 +783,30 @@ textarea{
 
 
 .tabla{
+  width: 35em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabeceraTabla {
+  border-bottom: 2px solid white;
   
+}
+
+.cabeceraTabla tr th{
+  padding: 1.5em;
+  
+}
+
+tbody tr td{
+  padding: 1em;
+}
+
+
+#tabla-articulos{
+  padding: 15px;
 }
 
 .btnEditar{
