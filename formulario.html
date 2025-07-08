@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+
+    <title>Formulario de contacto</title>
+  </head>
+  <body class="form-background">
+    <header class="form-header">
+      <nav class="form-nav">
+        <a href="./index.html"><img src="img/logo.png" alt="" /></a>
+        <div class="navbar">
+          <ul id="menuList">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="">Productos</a>
+            </li>
+            <li>
+              <a href="">Sucursales</a>
+            </li>
+            <li>
+              <a href="">Nosotros</a>
+            </li>
+          </ul>
+          <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="form-container">
+      <form class="form" id="form-articulo">
+        <h2 class="form-title">Gestión de productos</h2>
+        <input type="hidden" id="idArticulo" />
+        <div class="form-inputs">
+          <label class="form-label">
+            <input
+              type="text"
+              name="Nombre"
+              class="form-input"
+              id="nombre"
+              placeholder=" "
+            />
+            <span class="text-form">Nombre del producto</span>
+          </label>
+
+          <label class="form-label">
+            <input
+              type="number"
+              name="precio"
+              class="form-input"
+              id="precio"
+              placeholder=" "
+            />
+            <span class="text-form">Precio</span>
+          </label>
+          <label class="form-label">
+            <input
+              type="text"
+              name="imagen"
+              id="imagen"
+              class="form-input"
+              required
+              placeholder=" "
+            />
+            <span class="text-form">Imagen</span>
+          </label>
+          <button type="submit" class="btn-submit">Guardar</button>
+          <button type="button" class="btn-submit" id="cancelar">
+            Cancelar
+          </button>
+
+          <table class="tabla">
+            <thead >
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Url imagen</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-articulos"></tbody>
+          </table>
+        </div>
+        
+      </form>
+    </section>
+    <script src="./script.js"></script>
+    <script src="./app.js"></script>
+    
+  </body>
+</html>
+

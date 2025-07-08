@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script:wght@400..700&family=Poetsen+One&family=Rubik+Moonrocks&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <title>Planeta burguer</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" alt="">
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="">Productos</a>
+                    </li>
+                    <li>                        
+                        <a href="">Sucursales</a>
+                    </li>
+                    <li>                        
+                        <a href="./formulario.html">Ingreso de productos</a>
+                    </li>
+                    <li>                        
+                        <a href="carrito.html" class="icono-carrito">Pedido 🛒<span id="contador-carrito"> 0</span></a>
+                    </li>
+                </ul>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+                </div>
+                
+            </div>
+            
+        </nav>
+    </header>
+    <section class="container-hero">
+        <video src="./img/videoFondo.mp4" type="video/mp4" autoplay muted loop playsinline class="background-video" ></video>
+        <article class="pagina-info">
+            <h1>Planeta <br> burguer</h1>
+            <p>Comida de otro planeta, sabor de este mundo</p>
+            <!-- <button class="btn-compras">Compras</button> -->
+        </article>
+        <article class="imagen-principal">
+            <img src="./img/hamburguesa-principal.png" alt="">
+        </article>
+    </section>
+    <main>
+        <div class="titulo-cards">
+            <h2>Nuestros productos</h2>
+        </div>
+        <section class="cards-container">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img1-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Nebulosa BBQ</h3>
+                        <span>$5000</span>
+                    </div>
+                    <div class="sociales">
+                        <button class="btn-seleccionar" type="button" onclick="agregarAlCarrito('Nebulosa BBQ', 5000, 'img1-carrousel.jpg')">
+                            <span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button>                        
+                        <!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img2-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Blackburger</h3>
+                        <span>$8000</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" type="button" onclick="agregarAlCarrito('Blackburger', 8000,'img2-carrousel.jpg')">
+                            <span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button> <!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img3-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Galactic burguer</h3>
+                        <span>$10000</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Galactic burguer',10000,'img3-carrousel.jpg' )">
+                            <span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button>
+                        <!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img4-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Supernova cheese</h3>
+                        <span>$8500</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Supernova cheese', 8500,'img4-carrousel.jpg')">
+                            <span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img5-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Hiper triple burguer</h3>
+                        <span>$15000</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Hiper triple burguer', 15000,'img5-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img6-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Rocket burguer</h3>
+                        <span>$9000</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Rocket burguer', 9000,'img6-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img7-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Urano supreme</h3>
+                        <span>$12500</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Urano supreme', 12500,'img7-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img8-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Rocket delight</h3>
+                        <span>$10300</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Rocket delight', 10300,'img8-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img9-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Green alien</h3>
+                        <span>$9400</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('Green alien', 9400,'img9-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                         -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img1-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Nombre del producto</h3>
+                        <span>Descripción del producto</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('producto 2', 150,'img1-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                     -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./img/img1-carrousel.jpg" alt="">
+                </div>        
+                <div class="content">
+                    <div class="text">
+                        <h3>Nombre del producto</h3>
+                        <span>Descripción del producto</span>
+                    </div>        
+                    <div class="sociales">
+                        <button class="btn-seleccionar" onclick="agregarAlCarrito('producto 2', 150,'img1-carrousel.jpg')"><span class="button__text">Seleccionar</span>
+                            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+                        </button><!-- <button>Cancelar selección</button>                         -->
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <section class="promos-container">
+            <h2>Productos que harán tu experiencia aún mejor</h2>
+        </section>
+
+        <section class="container-productos">
+            <div class="prod">
+                <img src="./img/prod1.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod2.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod3.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod4.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod5.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod6.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod7.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod8.png" alt="">
+            </div>
+            <div class="prod">
+                <img src="./img/prod9.png" alt="">
+            </div>
+        </section>
+    </main>
+    <div class="visitas">
+        <h2>Nos visitaron esta semana</h2>
+        <div class="carrousel-visitas">
+            <img src="./img/selfie1.jpg" alt="" class="pic">
+            <img src="./img/selfie2.jpg" alt="" class="pic">
+            <img src="./img/selfie3.jpg" alt="" class="pic">
+            <img src="./img/selfie4.jpg" alt="" class="pic">
+            <img src="./img/selfie5.jpg" alt="" class="pic">
+            </div>
+    </div>
+
+    <div class="maps">
+        <h3>Nos encontramos aquí</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7817.93634609385!2d-58.48194381814811!3d-34.52728233570135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20maps!5e0!3m2!1ses-419!2sar!4v1731703480881!5m2!1ses-419!2sar" width="60%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer>
+        <div class="redes-sociales">
+            <a href=""><span class="fab fa-facebook"></span></a>
+            <a href=""><span class="fab fa-twitter"></span></a>
+            <a href=""><span class="fab fa-instagram"></span></a>
+            <a href=""><span class="fab fa-tiktok"></span></a>
+        </div>
+    </footer>      
+    <script src="index.js"></script>
+    <script src="carrito.js"></script>
+</body>
+</html>

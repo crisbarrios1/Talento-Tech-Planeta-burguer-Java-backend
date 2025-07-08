@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrito</title>
+</head>
+<body class="carrito-background">
+    
+    <header class="container-titulo-pedidos">
+        <div class="container-titulo-carrito">
+            <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+            <h1 class="titulo-carrito">Tu pedido</h1>
+        </div>        
+       
+    </header>
+
+    <section id="carrito" class="productos">
+        <a href="index.html" class="icono-carrito">⬅Volver</a>
+        <div id="lista-carrito">
+        </div>
+        <button onclick="realizarCompra()" class="btn-comprar">Finalizar la compra</button>
+    </section>
+    <script src="carrito.js"></script>
+</body>
+</html>
